@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ObjectSelection.unity
     guid: de8530086903c874482582ab2d8a08ca
   - enabled: 0
     path: Assets/Scenes/InstantiatingObject.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/DragandDropObject.unity
+    guid: 7fec8fab24ee24942a69e18a9bb1b5dc
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b0e6c4e0b48cfe847a861b657456d049, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4b9b60891d6d8924686209bb19a42eda, type: 2}
