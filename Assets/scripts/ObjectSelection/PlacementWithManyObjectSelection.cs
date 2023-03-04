@@ -27,18 +27,15 @@ public class PlacementWithManyObjectSelection : MonoBehaviour
     {
         if(Input.touchCount > 0)
         {
-            Debug.Log(Input.touchCount);
             Touch touch = Input.GetTouch(0);
 
             if(touch.phase == TouchPhase.Began)
             {
-                Debug.Log(touch.phase);
                 Ray ray = arCamera.ScreenPointToRay(touch.position);
                 RaycastHit hit;
                 if(Physics.Raycast(ray, out hit))
                 {
                     PlacedObject placedObject = hit.transform.GetComponent<PlacedObject>();
-                    Debug.Log(placedObject.name);
                     if(placedObject != null)
                     {
                         ChangeSelectedObject(placedObject);
@@ -50,13 +47,11 @@ public class PlacementWithManyObjectSelection : MonoBehaviour
 
     void ChangeSelectedObject(PlacedObject placedObject)
     {
-        Debug.Log(placedObject.name + " <<-START");
         for (int i = 0; i < placedObjects.Length; i++) 
         {
             placedObjects[i].SetColor(deActiveColor);
             placedObjects[i].IsSelected = false;
         }
-        Debug.Log(placedObject.name + " END-->>");
         placedObject.SetColor(activeColor);
         placedObject.IsSelected = true;
     }

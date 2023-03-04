@@ -34,10 +34,8 @@ public class ObjectPlacement : MonoBehaviour
                 RaycastHit hitObject;
                 if (Physics.Raycast(ray, out hitObject))
                 {
-                    Debug.Log($"hitobject: {hitObject.transform.name}");
                     if (hitObject.transform.name.Contains("PlacedObject"))
                     {
-                        Debug.Log($"hitobject: {hitObject.transform.name} OnTouchHold");
                         onTouchHold = true;
                     }
                 }
@@ -46,7 +44,6 @@ public class ObjectPlacement : MonoBehaviour
             {
                 if (touch.phase == TouchPhase.Ended) {                     
                     onTouchHold = false;
-                    Debug.Log($"hitobject: On release");
                 }
             }
 
@@ -57,11 +54,9 @@ public class ObjectPlacement : MonoBehaviour
                 if (placedObject == null)
                 {
                     placedObject = Instantiate(placedPrefab, hitPos.position, hitPos.rotation);
-                    Debug.Log($"Object Placed: {placedObject.name}");
                 }
                 else if (onTouchHold)
                 {
-                    Debug.Log($"hitobject: DRAG");
                     placedObject.transform.position = hitPos.position;
                     placedObject.transform.rotation = hitPos.rotation;
                 }
