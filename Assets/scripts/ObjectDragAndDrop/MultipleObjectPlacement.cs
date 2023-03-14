@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARRaycastManager))]
 public class MultipleObjectPlacement : MonoBehaviour
 {
+    [SerializeField] private GameObject informationPopUp;
     [SerializeField] GameObject objectPrefab;
     [SerializeField] Camera _camera;
 
@@ -17,9 +18,12 @@ public class MultipleObjectPlacement : MonoBehaviour
     private void Start()
     {
         _raycastManager = GetComponent<ARRaycastManager>();
+        informationPopUp.SetActive(true);
     }
     private void Update()
     {
+        if(informationPopUp != null && informationPopUp.activeSelf) return;
+
         if (Input.touchCount > 0)
         {
             Touch _touch = Input.GetTouch(0);

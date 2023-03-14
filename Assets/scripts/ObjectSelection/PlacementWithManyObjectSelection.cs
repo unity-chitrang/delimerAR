@@ -51,9 +51,11 @@ public class PlacementWithManyObjectSelection : MonoBehaviour
         {
             placedObjects[i].SetColor(deActiveColor);
             placedObjects[i].IsSelected = false;
+            placedObjects[i].DisableOverlayObject();
         }
         placedObject.SetColor(activeColor);
         placedObject.IsSelected = true;
+        placedObject.ShowObjectInformation();
     }
 
 }//PlacementWithManyObjectSelection class end
