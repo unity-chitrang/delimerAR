@@ -23,6 +23,11 @@ public class PlacementWithManyObjectSelection : MonoBehaviour
         placedObjects = GetComponentsInChildren<PlacedObject>();
     }
 
+    void Start()
+    {
+        ChangeSelectedObject(placedObjects[0]);
+    }
+
     private void Update()
     {
         if(Input.touchCount > 0)

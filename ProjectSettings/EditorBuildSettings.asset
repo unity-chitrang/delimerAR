@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 7fec8fab24ee24942a69e18a9bb1b5dc
   - enabled: 1
     path: Assets/Scenes/SelectionAndOverlay.unity
-    guid: 645cc1f536efd5841ae946014bc14aef
+    guid: 87118b867ce86eb438f4a760101c132a
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b0e6c4e0b48cfe847a861b657456d049, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4b9b60891d6d8924686209bb19a42eda, type: 2}

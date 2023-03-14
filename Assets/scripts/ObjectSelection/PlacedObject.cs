@@ -19,7 +19,7 @@ public class PlacedObject : MonoBehaviour
 
     [SerializeField] private string overlayName;
 
-    public void Start()
+    public void Awake()
     {
         if (overlayText != null)
         {
